@@ -1,0 +1,44 @@
+<h1>
+  <i class="fa-solid fa-chevron-left"></i>
+  <a href="#">Articles</a>
+</h1>
+<div class="items">
+  <div class="items-description">
+    <div class="item-description">
+      <div class="item-description-actions">
+        <i class="fa-regular fa-pen-to-square action"></i>
+        <i class="fa-solid fa-trash-can action"></i>
+      </div>
+      <div class="item-description-name">
+        Article 1
+      </div>
+      <div class="item-description-image">
+        image
+      </div>
+      <div class="item-description-data">
+        <div class="item-description-data-code">
+          <img src="/assets/images/code-barre.jpg" alt="code barre"/>
+        </div>
+        <div class="item-description-data-infos">
+          <div>Poids: 8.2Kg</div>
+          <div>Qté: 1</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-item-add" (click)="goToAddItem()">
+      <i class="fa-sharp fa-solid fa-plus"></i>
+      Ajouter <br> un article
+    </button>
+  </div>
+
+  <div class="items-actions">
+    <div class="items-actions-title">
+      <h2>Souhaitez-vous un emballage ?</h2>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-lg" [ngClass]="{'active': needPackaging}" (click)="togglePackaging(true)">Oui</button>
+      <button class="btn btn-lg" [ngClass]="{'active': needPackaging === false}" (click)="togglePackaging(false)">Non</button>
+    </div>
+    <button class="btn btn-primary btn-md btn-validate-action">Suivant</button>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<nav class="nav">
+  <div class="container">
+    <div class="nav-container">
+      <div class="nav-icon mobile-only" (click)="toggleMobileNav()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="nav-logo">
+        <i class="fa-solid fa-futbol nav-logo-item"></i>
+      </div>
+      <div [ngClass]="showMobileNav ? 'open' : 'close'" class="nav-navigation nav-mobile ">
+        <div class="nav-navigation-close mobile-only">
+          <i class="fa-solid fa-close" (click)="toggleMobileNav()"></i>
+        </div>
+        <ul class="nav-navigation-items">
+          <li class="nav-navigation-items-item">menu 1</li>
+          <li class="nav-navigation-items-item">menu 2</li>
+          <li class="nav-navigation-items-item">menu 3</li>
+          <li class="nav-navigation-items-item">menu 4</li>
+        </ul>
+      </div>
+      <div class="nav-cart">
+        <i class="fa-solid fa-briefcase"></i>
+        <span class="nav-cart-infos">237.25€</span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="global-container">
+  <div class="container">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

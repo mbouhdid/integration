@@ -1,0 +1,54 @@
+@import "../../assets/styles/variables";
+
+.form-elements {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  &.align-center {
+    align-items: center;
+  }
+  >div {
+    width: 100%;
+  }
+}
+
+.form-column {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  >div {
+    width: 100%;
+  }
+}
+
+.form-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.picture {
+  background-color: $primary-color;
+  max-width: 15rem;
+  height: 9rem;
+}
+
+.form-footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@include media-breakpoint-down(xl) {
+  .form-elements {
+    flex-direction: column;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .btn-validate-action {
+    width: 100%;
+  }
+}

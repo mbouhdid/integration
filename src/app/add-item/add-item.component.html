@@ -1,0 +1,156 @@
+<h1>
+  <i class="fa-solid fa-chevron-left"></i>
+  <a routerLink="/items">Ajouter un Article</a>
+</h1>
+
+<form>
+  <div class="form-elements align-center">
+    <div class="form-group">
+      <label>Code barre de l'article</label>
+      <div class="input-icon">
+        <input type="text" name="code" placeholder=""/>
+        <i class="fa-solid fa-barcode"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Description de l'article</label>
+      <input type="text" name="code" placeholder=""/>
+    </div>
+
+    <div class="form-column">
+      <div class="form-group">
+        <label>Poids</label>
+        <div class="select">
+          <select>
+            <option>p1</option>
+            <option>p2</option>
+            <option>p3</option>
+          </select>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Quantité</label>
+        <div class="select">
+          <select>
+            <option>p1</option>
+            <option>p2</option>
+            <option>p3</option>
+          </select>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-elements">
+    <div class="d-flex gap-1">
+      <div class="form-group">
+        <label>Photo de l'article</label>
+        <img src="" alt="" class="picture"/>
+      </div>
+      <div class="form-flex-column pt-2">
+        <div class="btn-group">
+          <button type="button" class="btn-icon-only">
+            <i class="fa-solid fa-camera"></i>
+          </button>
+          <button type="button" class="btn-icon-only">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="form-group">
+          <label>Fragile</label>
+          <div class="form-radio-group">
+            <div class="form-radio">
+              <input type="radio" name="type" id="yes" placeholder=""/>
+              <label for="yes">Oui</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="type" id="no" placeholder=""/>
+              <label for="no">Non</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-flex-column">
+      <div class="form-group">
+        <label>Assurance</label>
+        <div class="form-radio-group">
+          <div class="form-radio">
+            <input type="radio" name="assurance" id="yes_s" placeholder=""/>
+            <label for="yes_s">Oui</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="assurance" id="no_s" placeholder=""/>
+            <label for="no_s">Non</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-column align-items-start">
+        <div class="form-radio pv-05">
+          <input type="checkbox" name="val" id="val" placeholder=""/>
+          <label for="val">Ad valorem</label>
+        </div>
+        <div class="form-group">
+          <label>Montant</label>
+          <input type="text" name="montant" placeholder=""/>
+        </div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="form-elements">
+    <div class="form-group">
+      <label>Aller-retour</label>
+      <div class="form-radio-group">
+        <div class="form-radio">
+          <input type="radio" [(ngModel)]="isRoundTrip" name="a_r" id="yes_a" [value]=true [checked]="isRoundTrip" placeholder=""/>
+          <label for="yes_a">Oui</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" [(ngModel)]="isRoundTrip" name="a_r" id="no_a" [value]=false [checked]="!isRoundTrip" placeholder=""/>
+          <label for="no_a">Non</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-elements" [ngClass]="{'hidden': !isRoundTrip}">
+    <div class="form-group">
+      <label>Description du retour</label>
+      <input type="text" name="retour" placeholder=""/>
+    </div>
+    <div class="form-column">
+      <div class="form-group">
+        <label>Poids</label>
+        <div class="select">
+          <select>
+            <option>p1</option>
+            <option>p2</option>
+            <option>p3</option>
+          </select>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Quantité</label>
+        <div class="select">
+          <select>
+            <option>p1</option>
+            <option>p2</option>
+            <option>p3</option>
+          </select>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+  <div class="form-footer">
+    <button type="button" class="btn mv-2">
+      <i class="fa-sharp fa-solid fa-plus"></i>
+      Ajouter <br> un article
+    </button>
+    <button type="submit" class="btn btn-primary btn-md btn-validate-action">Suivant</button>
+  </div>
+</form>

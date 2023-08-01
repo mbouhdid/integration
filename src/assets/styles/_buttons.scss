@@ -1,0 +1,56 @@
+@import "variables";
+.btn {
+  cursor: pointer;
+  font-size: .7rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  overflow: hidden;
+  background: transparent;
+  border-radius: .3rem;
+  padding: .5rem;
+  box-shadow: 1px 1px 8px 0 #{$primary-color};
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: .3rem;
+  &.btn-lg {
+    font-size: 1.3rem;
+    padding: 1.5rem 4rem;
+  }
+  &.btn-md {
+    font-size: 1rem;
+    padding: 1rem 3rem;
+  }
+  i {
+    font-size: 2rem;
+  }
+  &:active, &.active{
+    &, &:hover, &:focus {
+      box-shadow: inset 0 4px 8px 0 #{$primary-color};
+    }
+  }
+  &.btn-primary {
+    background-color: darken($primary-color, 40%);
+    color: white;
+  }
+}
+
+.btn-icon-only {
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: .3rem;
+  padding: .2rem .4rem;
+  width: 2.3rem;
+  background-color: $secondary-color;
+}
+
+.btn-group {
+  display: flex;
+  gap: .5rem;
+}
