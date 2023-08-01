@@ -4,14 +4,6 @@
 @import "assets/styles/forms";
 @import "assets/styles/helpers";
 
-@font-face {
-  font-family: $font-family;
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto'),
-  url('assets/fonts/Roboto-Black.ttf') format('ttf'),
-  url('assets/fonts/Roboto-Black.ttf') format('ttf')
-}
 
 body {
   font-family: $font-family;
